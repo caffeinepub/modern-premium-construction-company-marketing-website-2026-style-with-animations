@@ -1,0 +1,271 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-build-a-single-page-marketing-website-for-a-construction-company-with-a-bold-premium-professional-2026-trending-layout-using-a-clean-grid-system-large-hero-sections-full-width-imagery-modern-spacing-rounded-corners-soft-shadows-and-subtle-glassmorphism-gradient-touches",
+      "featureTitle": "Build a single-page marketing website for a construction company with a bold, premium, professional 2026-trending layout using a clean grid system, large hero sections, full-width imagery, modern spacing, rounded corners, soft shadows, and subtle glassmorphism/gradient touches.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css",
+        "frontend/src/main.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-sticky-transparent-navbar-that-changes-style-on-scroll-e-g-gains-solid-blurred-background-stronger-shadow-border-and-includes-navigation-links-that-smoothly-scroll-to-each-section-hero-about-services-projects-why-choose-us-testimonials-contact-cta",
+      "featureTitle": "Implement a sticky, transparent navbar that changes style on scroll (e.g., gains solid/blurred background, stronger shadow/border) and includes navigation links that smoothly scroll to each section (Hero, About, Services, Projects, Why Choose Us, Testimonials, Contact/CTA).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/navigation/Navbar.tsx",
+        "frontend/src/hooks/useScrollPosition.ts",
+        "frontend/src/index.css",
+        "frontend/src/utils/scrollToSection.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-hero-section-with-a-full-width-cinematic-construction-site-background-image-a-strong-headline-exactly-building-the-future-with-strength-precision-a-short-subtitle-two-prominent-cta-buttons-labeled-get-a-quote-and-view-projects-and-subtle-parallax-and-or-fade-in-animation",
+      "featureTitle": "Create the Hero section with a full-width cinematic construction-site background image, a strong headline exactly “Building the Future with Strength & Precision”, a short subtitle, two prominent CTA buttons labeled “Get a Quote” and “View Projects”, and subtle parallax and/or fade-in animation.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/motion/Reveal.tsx",
+        "frontend/src/components/sections/HeroSection.tsx",
+        "frontend/src/hooks/useParallax.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-about-us-section-as-a-split-layout-image-on-one-side-text-on-the-other-with-a-modern-overlapping-image-effect-and-smooth-reveal-on-scroll-animation",
+      "featureTitle": "Implement the About Us section as a split layout (image on one side, text on the other) with a modern overlapping image effect and smooth reveal-on-scroll animation.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/motion/Reveal.tsx",
+        "frontend/src/components/sections/AboutSection.tsx",
+        "frontend/src/hooks/useInViewOnce.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-services-section-with-3-6-service-cards-in-a-responsive-grid-each-card-must-include-an-icon-title-and-short-description-and-have-hover-micro-interactions-lift-shadow-consistent-with-the-premium-style",
+      "featureTitle": "Implement the Services section with 3–6 service cards in a responsive grid. Each card must include an icon, title, and short description, and have hover micro-interactions (lift + shadow) consistent with the premium style.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/sections/ServicesSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-featured-projects-as-a-masonry-or-modern-grid-gallery-with-full-bleed-project-images-on-hover-show-an-overlay-with-project-details-and-on-click-open-a-lightbox-modal-to-view-the-image-larger-and-navigate-between-projects",
+      "featureTitle": "Implement Featured Projects as a masonry or modern grid gallery with full-bleed project images. On hover, show an overlay with project details, and on click open a lightbox (modal) to view the image larger and navigate between projects.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/modals/LightboxModal.tsx",
+        "frontend/src/components/sections/ProjectsSection.tsx",
+        "frontend/src/hooks/useFocusTrap.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-why-choose-us-section-with-a-clean-icon-based-layout-and-animated-statistic-counters-animated-numbers-that-begin-counting-when-the-section-enters-the-viewport",
+      "featureTitle": "Implement a Why Choose Us section with a clean icon-based layout and animated statistic counters (animated numbers) that begin counting when the section enters the viewport.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/sections/WhyChooseUsSection.tsx",
+        "frontend/src/hooks/useCountUp.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-testimonials-as-a-modern-card-carousel-slider-with-smooth-transitions-and-responsive-behavior-touch-swipe-support-on-mobile",
+      "featureTitle": "Implement Testimonials as a modern card carousel/slider with smooth transitions and responsive behavior (touch/swipe support on mobile).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/sections/TestimonialsSection.tsx",
+        "frontend/src/hooks/useCarousel.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-conversion-focused-call-to-action-section-with-a-dark-background-bold-typography-and-a-strong-cta-button-english-label-that-visually-stands-out-using-the-construction-yellow-accent",
+      "featureTitle": "Implement a conversion-focused Call to Action section with a dark background, bold typography, and a strong CTA button (English label) that visually stands out using the construction-yellow accent.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/sections/CtaSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-minimal-but-modern-footer-including-contact-information-quick-links-and-social-icons-styled-to-match-the-premium-theme",
+      "featureTitle": "Create a minimal but modern Footer including contact information, quick links, and social icons, styled to match the premium theme.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/Footer.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-site-wide-smooth-reveal-animations-on-scroll-for-major-sections-elements-and-micro-interactions-on-hover-buttons-links-cards-while-maintaining-performance-and-accessibility-respect-reduced-motion-preference",
+      "featureTitle": "Add site-wide smooth reveal animations on scroll for major sections/elements and micro-interactions on hover (buttons, links, cards) while maintaining performance and accessibility (respect reduced motion preference).",
+      "files": [
+        "frontend/src/components/motion/Reveal.tsx",
+        "frontend/src/components/navigation/Navbar.tsx",
+        "frontend/src/hooks/useReducedMotion.ts",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-the-entire-site-is-fully-responsive-and-mobile-optimized-with-strong-typography-large-modern-sans-serif-clear-hierarchy-and-modern-ui-ux-best-practices-readability-contrast-spacing-accessible-interactions",
+      "featureTitle": "Ensure the entire site is fully responsive and mobile-optimized, with strong typography (large modern sans-serif), clear hierarchy, and modern UI/UX best practices (readability, contrast, spacing, accessible interactions).",
+      "files": [
+        "frontend/src/components/sections/HeroSection.tsx",
+        "frontend/src/components/sections/ProjectsSection.tsx",
+        "frontend/src/components/sections/ServicesSection.tsx",
+        "frontend/src/components/sections/TestimonialsSection.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-required-generated-construction-imagery-as-static-assets-under-frontend-public-assets-generated-and-wire-them-into-the-hero-about-and-projects-sections-as-full-width-strategic-visuals-consistent-with-the-premium-layout",
+      "featureTitle": "Add the required generated construction imagery as static assets under frontend/public/assets/generated and wire them into the Hero, About, and Projects sections as full-width/strategic visuals consistent with the premium layout.",
+      "files": [
+        "frontend/src/components/sections/AboutSection.tsx",
+        "frontend/src/components/sections/HeroSection.tsx",
+        "frontend/src/components/sections/ProjectsSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

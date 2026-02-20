@@ -1,0 +1,77 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-13T15:14:18.318Z",
+  "summary": "Most core frontend sections (Hero, About, Services, Projects w/ lightbox, Why Choose Us w/ counters, Testimonials carousel, CTA, Footer) are implemented and wired in a single-page layout with premium styling, animations, and scroll-triggered reveals. However, the diff does not provide evidence that the required generated image assets were actually added under the specified public path, and several unrequested additions (notably backend and Internet Identity/actor hooks, plus a promotional footer link) appear in the changes.",
+  "missing_requirements": [
+    {
+      "id": "REQ-13",
+      "requirement": "Add the required generated construction imagery as static assets under frontend/public/assets/generated and wire them into the Hero, About, and Projects sections.",
+      "reason": "The sections reference image paths under /assets/generated, but the diff summary does not show the actual image files being added under frontend/public/assets/generated (and some added files were omitted due to limits). Therefore presence of the required static assets cannot be verified from the provided diff summary.",
+      "evidence": [
+        "frontend/src/components/sections/HeroSection.tsx (references /assets/generated/construction-hero-bg.dim_1920x1080.png)",
+        "frontend/src/components/sections/AboutSection.tsx (references /assets/generated/about-team.dim_1400x1000.png)",
+        "frontend/src/components/sections/ProjectsSection.tsx (references /assets/generated/project-01..06.dim_1200x900.png)"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Backend canister stub added (empty Motoko actor).",
+      "reason": "BuildRequest explicitly says to keep backend changes out unless explicitly needed; this marketing site does not require backend changes, and no backend functionality is requested.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Internet Identity / actor-related hooks added (authentication/actor querying infrastructure).",
+      "reason": "Non-goals include adding user accounts/login flows; also constraints mention II/actor hooks as immutable and to avoid auth providers (not required for this marketing site). These hooks are not needed to implement the requested marketing page features.",
+      "evidence": [
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/hooks/useInternetIdentity.ts"
+      ]
+    },
+    {
+      "description": "Promotional outbound link to caffeine.ai plus a heart glyph in footer copy.",
+      "reason": "Footer requirements only ask for contact info, quick links, and social icons; adding a promotional attribution link is not requested.",
+      "evidence": [
+        "frontend/src/components/layout/Footer.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.62,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/layout/Footer.tsx",
+    "frontend/src/components/modals/LightboxModal.tsx",
+    "frontend/src/components/motion/Reveal.tsx",
+    "frontend/src/components/navigation/Navbar.tsx",
+    "frontend/src/components/sections/AboutSection.tsx",
+    "frontend/src/components/sections/CtaSection.tsx",
+    "frontend/src/components/sections/HeroSection.tsx",
+    "frontend/src/components/sections/ProjectsSection.tsx",
+    "frontend/src/components/sections/ServicesSection.tsx",
+    "frontend/src/components/sections/TestimonialsSection.tsx",
+    "frontend/src/components/sections/WhyChooseUsSection.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useCarousel.ts",
+    "frontend/src/hooks/useCountUp.ts",
+    "frontend/src/hooks/useFocusTrap.ts",
+    "frontend/src/hooks/useInViewOnce.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useParallax.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/hooks/useReducedMotion.ts",
+    "frontend/src/hooks/useScrollPosition.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/utils/scrollToSection.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

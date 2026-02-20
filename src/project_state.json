@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Modern, high-end construction company marketing website with a bold premium 2026-style design, strong typography, smooth animations, and conversion-focused responsive layout.",
+  "architectural_notes": [
+    "Use bold color palette (charcoal black, construction yellow, white) with large modern sans-serif typography",
+    "Use smooth scroll/reveal animations and micro-interactions; consider subtle glassmorphism/gradients, rounded corners, soft shadows",
+    "Use professional stock construction imagery placed strategically across the site",
+    "Ensure fully responsive layout with mobile-first considerations"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Cinematic construction site wide hero background photo with dramatic lighting (construction-hero-bg.dim_1920x1080.png)\n- Modern premium construction team on-site photo, clean composition (about-team.dim_1400x1000.png)\n- High-end commercial building exterior at dusk, architectural photo (project-01.dim_1200x900.png)\n- Active bridge/steel framework construction scene, cinematic perspective (project-02.dim_1200x900.png)\n- Luxury interior build-out / fit-out scene, premium materials (project-03.dim_1200x900.png)\n- Modern residential development construction scene, golden hour (project-04.dim_1200x900.png)\n- Industrial facility construction with heavy machinery, high contrast (project-05.dim_1200x900.png)\n- Clean close-up of construction details (rebar/concrete/blueprints) with premium look (project-06.dim_1200x900.png)",
+  "existing_features": [
+    {
+      "id": "feature-build-a-single-page-marketing-website-for-a-construction-company-with-a-bold-premium-professional-2026-trending-layout-using-a-clean-grid-system-large-hero-sections-full-width-imagery-modern-spacing-rounded-corners-soft-shadows-and-subtle-glassmorphism-gradient-touches",
+      "title": "Build a single-page marketing website for a construction company with a bold, premium, professional 2026-trending layout using a clean grid system, large hero sections, full-width imagery, modern spacing, rounded corners, soft shadows, and subtle glassmorphism/gradient touches.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-sticky-transparent-navbar-that-changes-style-on-scroll-e-g-gains-solid-blurred-background-stronger-shadow-border-and-includes-navigation-links-that-smoothly-scroll-to-each-section-hero-about-services-projects-why-choose-us-testimonials-contact-cta",
+      "title": "Implement a sticky, transparent navbar that changes style on scroll (e.g., gains solid/blurred background, stronger shadow/border) and includes navigation links that smoothly scroll to each section (Hero, About, Services, Projects, Why Choose Us, Testimonials, Contact/CTA).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-hero-section-with-a-full-width-cinematic-construction-site-background-image-a-strong-headline-exactly-building-the-future-with-strength-precision-a-short-subtitle-two-prominent-cta-buttons-labeled-get-a-quote-and-view-projects-and-subtle-parallax-and-or-fade-in-animation",
+      "title": "Create the Hero section with a full-width cinematic construction-site background image, a strong headline exactly “Building the Future with Strength & Precision”, a short subtitle, two prominent CTA buttons labeled “Get a Quote” and “View Projects”, and subtle parallax and/or fade-in animation.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-about-us-section-as-a-split-layout-image-on-one-side-text-on-the-other-with-a-modern-overlapping-image-effect-and-smooth-reveal-on-scroll-animation",
+      "title": "Implement the About Us section as a split layout (image on one side, text on the other) with a modern overlapping image effect and smooth reveal-on-scroll animation.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-services-section-with-3-6-service-cards-in-a-responsive-grid-each-card-must-include-an-icon-title-and-short-description-and-have-hover-micro-interactions-lift-shadow-consistent-with-the-premium-style",
+      "title": "Implement the Services section with 3–6 service cards in a responsive grid. Each card must include an icon, title, and short description, and have hover micro-interactions (lift + shadow) consistent with the premium style.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-featured-projects-as-a-masonry-or-modern-grid-gallery-with-full-bleed-project-images-on-hover-show-an-overlay-with-project-details-and-on-click-open-a-lightbox-modal-to-view-the-image-larger-and-navigate-between-projects",
+      "title": "Implement Featured Projects as a masonry or modern grid gallery with full-bleed project images. On hover, show an overlay with project details, and on click open a lightbox (modal) to view the image larger and navigate between projects.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-why-choose-us-section-with-a-clean-icon-based-layout-and-animated-statistic-counters-animated-numbers-that-begin-counting-when-the-section-enters-the-viewport",
+      "title": "Implement a Why Choose Us section with a clean icon-based layout and animated statistic counters (animated numbers) that begin counting when the section enters the viewport.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-testimonials-as-a-modern-card-carousel-slider-with-smooth-transitions-and-responsive-behavior-touch-swipe-support-on-mobile",
+      "title": "Implement Testimonials as a modern card carousel/slider with smooth transitions and responsive behavior (touch/swipe support on mobile).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-conversion-focused-call-to-action-section-with-a-dark-background-bold-typography-and-a-strong-cta-button-english-label-that-visually-stands-out-using-the-construction-yellow-accent",
+      "title": "Implement a conversion-focused Call to Action section with a dark background, bold typography, and a strong CTA button (English label) that visually stands out using the construction-yellow accent.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-minimal-but-modern-footer-including-contact-information-quick-links-and-social-icons-styled-to-match-the-premium-theme",
+      "title": "Create a minimal but modern Footer including contact information, quick links, and social icons, styled to match the premium theme.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-site-wide-smooth-reveal-animations-on-scroll-for-major-sections-elements-and-micro-interactions-on-hover-buttons-links-cards-while-maintaining-performance-and-accessibility-respect-reduced-motion-preference",
+      "title": "Add site-wide smooth reveal animations on scroll for major sections/elements and micro-interactions on hover (buttons, links, cards) while maintaining performance and accessibility (respect reduced motion preference).",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-entire-site-is-fully-responsive-and-mobile-optimized-with-strong-typography-large-modern-sans-serif-clear-hierarchy-and-modern-ui-ux-best-practices-readability-contrast-spacing-accessible-interactions",
+      "title": "Ensure the entire site is fully responsive and mobile-optimized, with strong typography (large modern sans-serif), clear hierarchy, and modern UI/UX best practices (readability, contrast, spacing, accessible interactions).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-required-generated-construction-imagery-as-static-assets-under-frontend-public-assets-generated-and-wire-them-into-the-hero-about-and-projects-sections-as-full-width-strategic-visuals-consistent-with-the-premium-layout",
+      "title": "Add the required generated construction imagery as static assets under frontend/public/assets/generated and wire them into the Hero, About, and Projects sections as full-width/strategic visuals consistent with the premium layout.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create overall modern premium construction company website layout using clean grid, large hero sections, full-width imagery, and modern spacing",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Implement Hero section with full-width cinematic construction image, headline/subtitle, two CTAs (Get a Quote / View Projects), and subtle parallax or fade-in animation",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Implement About Us section with split layout, overlapping image effect, and smooth scroll/reveal animation",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Implement Services section with 3–6 icon service cards in grid, including hover lift + shadow animations",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Implement Featured Projects gallery (masonry/modern grid) with hover overlays and lightbox effect on click",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Implement Why Choose Us section with icon-based layout and animated statistic counters",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Implement Testimonials section as a modern card carousel with smooth transitions",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Implement conversion-focused CTA section (dark background, bold typography, strong CTA button) and modern minimal footer with contact info, quick links, and social icons",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Add sticky transparent navbar that changes style on scroll plus site-wide smooth reveal animations, micro-interactions, and responsive mobile-optimized behavior",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Modern premium construction company marketing website (2026-style) with animations and conversion-focused sections",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

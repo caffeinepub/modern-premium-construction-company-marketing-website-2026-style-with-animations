@@ -1,0 +1,278 @@
+{
+  "kind": "build_request",
+  "title": "Modern premium construction company marketing website (2026-style) with animations and conversion-focused sections",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Build a single-page marketing website for a construction company with a bold, premium, professional 2026-trending layout using a clean grid system, large hero sections, full-width imagery, modern spacing, rounded corners, soft shadows, and subtle glassmorphism/gradient touches.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Create a modern, high-end construction company website with a 2026 trending web design layout."
+        ]
+      },
+      "acceptanceCriteria": [
+        "The landing page renders all requested sections in the specified order and feels visually cohesive and premium.",
+        "The design uses a grid-based layout, large section spacing, rounded corners, and soft shadows consistently.",
+        "Color palette is primarily charcoal black + construction yellow + white."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a sticky, transparent navbar that changes style on scroll (e.g., gains solid/blurred background, stronger shadow/border) and includes navigation links that smoothly scroll to each section (Hero, About, Services, Projects, Why Choose Us, Testimonials, Contact/CTA).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Add: Sticky transparent navbar that changes on scroll."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navbar is fixed at the top and remains usable on all screen sizes.",
+        "On scroll, navbar transitions to a more readable style (background and contrast change) with smooth animation.",
+        "Clicking navbar links smoothly scrolls to the correct section."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create the Hero section with a full-width cinematic construction-site background image, a strong headline exactly “Building the Future with Strength & Precision”, a short subtitle, two prominent CTA buttons labeled “Get a Quote” and “View Projects”, and subtle parallax and/or fade-in animation.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Hero Section: Full-width background image of a construction site (high quality, cinematic lighting). Strong headline like: “Building the Future with Strength & Precision” ... Two CTA buttons (Get a Quote, View Projects). Subtle parallax or fade-in animation."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero uses a full-width background image with an overlay/contrast treatment to keep text readable.",
+        "Headline text matches exactly: “Building the Future with Strength & Precision”.",
+        "Two CTA buttons are visible above the fold on desktop and remain accessible on mobile.",
+        "Hero content animates in (fade/slide) and the background has a subtle parallax/scroll effect without jank."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement the About Us section as a split layout (image on one side, text on the other) with a modern overlapping image effect and smooth reveal-on-scroll animation.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "About Us Section: Split layout (image on one side, text on the other). Use a modern overlapping image effect. Smooth scroll animation."
+        ]
+      },
+      "acceptanceCriteria": [
+        "On desktop, About shows a two-column split layout; on mobile it stacks logically with good spacing.",
+        "The image presentation includes an overlapping/offset layer effect (e.g., framed card, secondary accent block, or stacked images).",
+        "Section reveals with a smooth scroll-triggered animation."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement the Services section with 3–6 service cards in a responsive grid. Each card must include an icon, title, and short description, and have hover micro-interactions (lift + shadow) consistent with the premium style.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Services Section: 3–6 service cards with icons. Hover animations (lift effect + shadow). Use grid layout with equal spacing."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Services render 3–6 cards with consistent spacing and alignment across breakpoints.",
+        "Each service card includes an icon, a clear title, and a short description in English.",
+        "Hovering a card triggers a lift and shadow transition (and optional subtle border/gradient change) smoothly."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Implement Featured Projects as a masonry or modern grid gallery with full-bleed project images. On hover, show an overlay with project details, and on click open a lightbox (modal) to view the image larger and navigate between projects.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Featured Projects: Masonry or modern grid gallery layout. Hover overlay with project details. Lightbox effect on click."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Projects display in a modern grid or masonry-like layout with consistent gutters.",
+        "Hovering a project reveals an overlay containing at least a project name and a short detail line.",
+        "Clicking a project opens a modal/lightbox with the larger image; user can close it and navigate to next/previous project.",
+        "Lightbox is keyboard accessible (Escape closes; focus is trapped within modal)."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Implement a Why Choose Us section with a clean icon-based layout and animated statistic counters (animated numbers) that begin counting when the section enters the viewport.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Why Choose Us: Statistics counters (animated numbers). Clean icon-based layout."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Section displays multiple reasons/features with icons and concise English copy.",
+        "At least 3 statistics counters animate from 0 to target values on first view.",
+        "Animation triggers on scroll into view and does not continuously re-trigger on minor scroll changes."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Implement Testimonials as a modern card carousel/slider with smooth transitions and responsive behavior (touch/swipe support on mobile).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Testimonials: Modern card carousel slider. Smooth transition animation."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Testimonials appear in a horizontally sliding carousel with smooth transitions.",
+        "Carousel includes controls (dots/arrows) and supports swipe on mobile.",
+        "Cards maintain premium styling (rounded corners, subtle shadows, readable typography)."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Implement a conversion-focused Call to Action section with a dark background, bold typography, and a strong CTA button (English label) that visually stands out using the construction-yellow accent.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Call to Action Section: Dark background with bold typography. Strong CTA button."
+        ]
+      },
+      "acceptanceCriteria": [
+        "CTA section has a clearly darker background than surrounding sections and strong typographic hierarchy.",
+        "CTA button is prominent and uses the accent color appropriately.",
+        "CTA section looks good on mobile and desktop with no cramped spacing."
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Create a minimal but modern Footer including contact information, quick links, and social icons, styled to match the premium theme.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Footer: Minimal but modern. Contact info, quick links, social icons."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer includes: contact info, a list of quick links, and social icons.",
+        "Footer layout is responsive and maintains readability and spacing across breakpoints.",
+        "Footer styling matches site palette and typography."
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Add site-wide smooth reveal animations on scroll for major sections/elements and micro-interactions on hover (buttons, links, cards) while maintaining performance and accessibility (respect reduced motion preference).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Smooth scroll animations. Micro-interactions on hover. Smooth reveal animations."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Major sections/components animate in as they enter the viewport (e.g., fade/slide) with consistent timing/easing.",
+        "Hover states exist for interactive elements (buttons, nav links, cards) with smooth transitions.",
+        "If the user prefers reduced motion, animations are reduced/disabled appropriately."
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Ensure the entire site is fully responsive and mobile-optimized, with strong typography (large modern sans-serif), clear hierarchy, and modern UI/UX best practices (readability, contrast, spacing, accessible interactions).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Fully responsive layout (mobile optimized). Use modern UI/UX best practices."
+        ]
+      },
+      "acceptanceCriteria": [
+        "All sections render correctly on common breakpoints (mobile/tablet/desktop) without overflow or layout breakage.",
+        "Typography uses a modern sans-serif with a premium feel and strong hierarchy (headlines, subheads, body).",
+        "Interactive elements meet basic accessibility expectations (focus states visible, sufficient contrast for text)."
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Add the required generated construction imagery as static assets under frontend/public/assets/generated and wire them into the Hero, About, and Projects sections as full-width/strategic visuals consistent with the premium layout.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Professional stock construction images placed strategically. Full-width background image of a construction site (high quality, cinematic lighting)."
+        ]
+      },
+      "acceptanceCriteria": [
+        "All generated images are present under frontend/public/assets/generated and are referenced directly by the frontend.",
+        "Hero uses the generated cinematic construction background image.",
+        "Featured Projects uses the generated project images, and About uses the generated about image."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend files under frontend/src/components/ui and the Internet Identity/actor hooks listed as immutable must not be modified directly; compose them as-is if needed.",
+    "No third-party authentication providers beyond Internet Identity (not required for this marketing site).",
+    "Do not add external databases or non-Motoko backends; keep backend changes out unless explicitly needed."
+  ],
+  "nonGoals": [
+    "Building an admin dashboard/CMS for editing site content.",
+    "Implementing a real contact form submission pipeline (email/SMS/third-party integrations).",
+    "Adding user accounts, login flows, or gated content."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Cinematic construction site wide hero background photo with dramatic lighting (construction-hero-bg.dim_1920x1080.png)",
+      "Modern premium construction team on-site photo, clean composition (about-team.dim_1400x1000.png)",
+      "High-end commercial building exterior at dusk, architectural photo (project-01.dim_1200x900.png)",
+      "Active bridge/steel framework construction scene, cinematic perspective (project-02.dim_1200x900.png)",
+      "Luxury interior build-out / fit-out scene, premium materials (project-03.dim_1200x900.png)",
+      "Modern residential development construction scene, golden hour (project-04.dim_1200x900.png)",
+      "Industrial facility construction with heavy machinery, high contrast (project-05.dim_1200x900.png)",
+      "Clean close-up of construction details (rebar/concrete/blueprints) with premium look (project-06.dim_1200x900.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [
+      "Prefer bold, premium, professional web designs with strong typography, smooth animations, grid layouts, and charcoal/yellow/white palette for construction brand websites."
+    ],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

@@ -1,0 +1,437 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Premium 2026-style construction company single-page marketing site (animated, conversion-focused)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a cohesive, premium single-page layout with modern grid, spacing, rounded corners, soft shadows, and subtle glass/gradient touches using a charcoal/yellow/white palette.",
+      "acceptanceCriteria": [
+        "The landing page renders all requested sections in the specified order and feels visually cohesive and premium.",
+        "The design uses a grid-based layout, large section spacing, rounded corners, and soft shadows consistently.",
+        "Color palette is primarily charcoal black + construction yellow + white."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page composition rendering sections in the required order (Hero, About, Services, Projects, Why Choose Us, Testimonials, Contact/CTA) plus Footer, with premium layout structure and shared spacing system."
+        },
+        {
+          "path": "frontend/src/components/layout/SiteLayout.tsx",
+          "operation": "create",
+          "description": "Add a layout wrapper providing consistent max-width container grid, section padding rules, and premium surface styling (rounded corners, soft shadows, subtle gradients/glass)."
+        },
+        {
+          "path": "frontend/src/components/sections/Section.tsx",
+          "operation": "create",
+          "description": "Create a reusable Section wrapper component to standardize grid layout, vertical spacing, and optional background treatments across sections."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend theme tokens to support the premium charcoal/yellow/white brand palette, modern spacing, and consistent shadows/radii used throughout the page."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Add global Tailwind directives and premium base styling (typography scale, background/foreground colors, consistent focus styles) aligned with charcoal/yellow/white branding."
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Ensure the app renders the new single-page App.tsx and applies global styling import for the premium marketing layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement a sticky transparent navbar that transitions style on scroll and smooth-scrolls to each section anchor.",
+      "acceptanceCriteria": [
+        "Navbar is fixed at the top and remains usable on all screen sizes.",
+        "On scroll, navbar transitions to a more readable style (background and contrast change) with smooth animation.",
+        "Clicking navbar links smoothly scrolls to the correct section."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/navigation/Navbar.tsx",
+          "operation": "create",
+          "description": "Create a sticky, initially transparent navbar with responsive layout and links to section anchors; add scroll-state styling (solid/blurred background + stronger border/shadow) with smooth transitions."
+        },
+        {
+          "path": "frontend/src/hooks/useScrollPosition.ts",
+          "operation": "create",
+          "description": "Add a small hook to observe scroll position and expose a boolean for when the navbar should change style (throttled/raf for performance)."
+        },
+        {
+          "path": "frontend/src/utils/scrollToSection.ts",
+          "operation": "create",
+          "description": "Add a helper to smoothly scroll to section IDs with sticky-navbar offset handling and accessibility-friendly focus management."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire Navbar into the single-page layout and ensure each required section has a stable ID that matches the navbar links."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Enable smooth scrolling behavior for in-page navigation while ensuring reduced-motion users are respected. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build the Hero section with full-width cinematic background, exact headline text, two CTAs, and subtle parallax/fade-in animations.",
+      "acceptanceCriteria": [
+        "Hero uses a full-width background image with an overlay/contrast treatment to keep text readable.",
+        "Headline text matches exactly: “Building the Future with Strength & Precision”.",
+        "Two CTA buttons are visible above the fold on desktop and remain accessible on mobile.",
+        "Hero content animates in (fade/slide) and the background has a subtle parallax/scroll effect without jank."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "create",
+          "description": "Implement the Hero with full-width background image, overlay for readability, exact headline “Building the Future with Strength & Precision”, subtitle, and two prominent CTA buttons (“Get a Quote”, “View Projects”) that scroll to Contact/CTA and Projects."
+        },
+        {
+          "path": "frontend/src/hooks/useParallax.ts",
+          "operation": "create",
+          "description": "Add an optional lightweight parallax hook for the hero background that uses requestAnimationFrame and disables itself for reduced-motion users."
+        },
+        {
+          "path": "frontend/src/components/motion/Reveal.tsx",
+          "operation": "create",
+          "description": "Create a reusable reveal-on-mount / reveal-on-scroll wrapper (fade/slide) used by the Hero content. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire HeroSection into the page at the top and ensure CTA buttons connect to the correct section IDs (Contact/CTA and Projects)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Create an About Us split layout with overlapping image effect and smooth reveal-on-scroll animation.",
+      "acceptanceCriteria": [
+        "On desktop, About shows a two-column split layout; on mobile it stacks logically with good spacing.",
+        "The image presentation includes an overlapping/offset layer effect (e.g., framed card, secondary accent block, or stacked images).",
+        "Section reveals with a smooth scroll-triggered animation."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/AboutSection.tsx",
+          "operation": "create",
+          "description": "Implement About as a responsive split layout with an overlapping/offset image treatment (accent block/frame + image card) and premium typography/copy."
+        },
+        {
+          "path": "frontend/src/hooks/useInViewOnce.ts",
+          "operation": "create",
+          "description": "Add an IntersectionObserver hook that triggers once when a section enters the viewport to support reveal-on-scroll animations without repeated retriggering."
+        },
+        {
+          "path": "frontend/src/components/motion/Reveal.tsx",
+          "operation": "modify",
+          "description": "Extend the reveal wrapper to support scroll-triggered reveal via useInViewOnce and reduced-motion behavior. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire AboutSection after Hero and assign the required section ID for navbar navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Implement Services section with 3–6 responsive service cards including icons and premium hover micro-interactions.",
+      "acceptanceCriteria": [
+        "Services render 3–6 cards with consistent spacing and alignment across breakpoints.",
+        "Each service card includes an icon, a clear title, and a short description in English.",
+        "Hovering a card triggers a lift and shadow transition (and optional subtle border/gradient change) smoothly."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/ServicesSection.tsx",
+          "operation": "create",
+          "description": "Build a responsive grid of 3–6 service cards (icon, title, description) with premium hover states (lift + shadow + subtle border/gradient accents) consistent with the site theme."
+        },
+        {
+          "path": "frontend/src/components/ui/Icon.tsx",
+          "operation": "create",
+          "description": "Add a minimal icon component or inline SVG set used by service cards and other icon-based sections to keep visual style consistent."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire ServicesSection into the page with the correct section ID for navbar scrolling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Create Featured Projects gallery (modern grid/masonry feel) with hover overlays and an accessible lightbox modal with next/previous navigation.",
+      "acceptanceCriteria": [
+        "Projects display in a modern grid or masonry-like layout with consistent gutters.",
+        "Hovering a project reveals an overlay containing at least a project name and a short detail line.",
+        "Clicking a project opens a modal/lightbox with the larger image; user can close it and navigate to next/previous project.",
+        "Lightbox is keyboard accessible (Escape closes; focus is trapped within modal)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/ProjectsSection.tsx",
+          "operation": "create",
+          "description": "Implement a modern project gallery using the generated project images with hover overlay details; clicking opens a lightbox and supports next/previous navigation."
+        },
+        {
+          "path": "frontend/src/components/modals/LightboxModal.tsx",
+          "operation": "create",
+          "description": "Create an accessible lightbox modal with focus trap, Escape-to-close, and keyboard navigation (left/right) plus visible next/prev controls."
+        },
+        {
+          "path": "frontend/src/hooks/useFocusTrap.ts",
+          "operation": "create",
+          "description": "Add a small focus-trap hook to keep keyboard focus within the open lightbox modal and restore focus on close."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire ProjectsSection into the page and ensure its section ID matches the navbar link and Hero CTA (“View Projects”)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Implement Why Choose Us with icon-based layout and animated statistic counters triggered once on entering the viewport.",
+      "acceptanceCriteria": [
+        "Section displays multiple reasons/features with icons and concise English copy.",
+        "At least 3 statistics counters animate from 0 to target values on first view.",
+        "Animation triggers on scroll into view and does not continuously re-trigger on minor scroll changes."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/WhyChooseUsSection.tsx",
+          "operation": "create",
+          "description": "Build an icon-based reasons layout plus a stats area containing at least 3 counters that animate from 0 on first viewport entry."
+        },
+        {
+          "path": "frontend/src/hooks/useCountUp.ts",
+          "operation": "create",
+          "description": "Add a count-up hook that animates numeric values with requestAnimationFrame, triggers via useInViewOnce, and respects reduced motion."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire WhyChooseUsSection into the page and ensure correct section ID for navbar scrolling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Create a responsive testimonials carousel with smooth transitions and touch/swipe support.",
+      "acceptanceCriteria": [
+        "Testimonials appear in a horizontally sliding carousel with smooth transitions.",
+        "Carousel includes controls (dots/arrows) and supports swipe on mobile.",
+        "Cards maintain premium styling (rounded corners, subtle shadows, readable typography)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/TestimonialsSection.tsx",
+          "operation": "create",
+          "description": "Implement a premium testimonial card carousel/slider with smooth transitions, dots/arrows, and swipe handling on mobile."
+        },
+        {
+          "path": "frontend/src/hooks/useCarousel.ts",
+          "operation": "create",
+          "description": "Add carousel state management (active index, next/prev, drag/swipe thresholds) used by Testimonials for responsive behavior."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire TestimonialsSection into the page and ensure correct section ID for navbar scrolling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Add a conversion-focused dark CTA section with bold typography and a prominent construction-yellow button.",
+      "acceptanceCriteria": [
+        "CTA section has a clearly darker background than surrounding sections and strong typographic hierarchy.",
+        "CTA button is prominent and uses the accent color appropriately.",
+        "CTA section looks good on mobile and desktop with no cramped spacing."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/CtaSection.tsx",
+          "operation": "create",
+          "description": "Create a dark-background CTA section with bold copy and a standout construction-yellow button; button scrolls to the Contact content within the same section or to a dedicated Contact anchor."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire CtaSection into the page after Testimonials and ensure it provides the required Contact/CTA anchor target for navbar and Hero CTA."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Implement a minimal modern footer with contact info, quick links, and social icons matching the premium theme.",
+      "acceptanceCriteria": [
+        "Footer includes: contact info, a list of quick links, and social icons.",
+        "Footer layout is responsive and maintains readability and spacing across breakpoints.",
+        "Footer styling matches site palette and typography."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/layout/Footer.tsx",
+          "operation": "create",
+          "description": "Build a responsive footer containing contact information, quick links (scroll-to-section), and social icons styled to match the premium charcoal/yellow/white theme."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire Footer at the bottom of the single-page layout and connect quick links to section IDs."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Add consistent reveal-on-scroll animations and hover micro-interactions site-wide with performance and reduced-motion accessibility.",
+      "acceptanceCriteria": [
+        "Major sections/components animate in as they enter the viewport (e.g., fade/slide) with consistent timing/easing.",
+        "Hover states exist for interactive elements (buttons, nav links, cards) with smooth transitions.",
+        "If the user prefers reduced motion, animations are reduced/disabled appropriately."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useReducedMotion.ts",
+          "operation": "create",
+          "description": "Add a hook to detect prefers-reduced-motion and expose a boolean used to reduce/disable animations across components."
+        },
+        {
+          "path": "frontend/src/components/motion/Reveal.tsx",
+          "operation": "modify",
+          "description": "Standardize reveal animation timing/easing and integrate reduced-motion logic so animations are reduced/disabled appropriately. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add consistent transition defaults and accessible focus/hover styles for buttons/links/cards; include reduced-motion media query adjustments for smooth scrolling and animations."
+        },
+        {
+          "path": "frontend/src/components/navigation/Navbar.tsx",
+          "operation": "modify",
+          "description": "Ensure navbar link and button hover/focus micro-interactions are consistent and accessible (visible focus states, smooth transitions)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Ensure full responsiveness, premium typography hierarchy, and accessible interactions across all sections.",
+      "acceptanceCriteria": [
+        "All sections render correctly on common breakpoints (mobile/tablet/desktop) without overflow or layout breakage.",
+        "Typography uses a modern sans-serif with a premium feel and strong hierarchy (headlines, subheads, body).",
+        "Interactive elements meet basic accessibility expectations (focus states visible, sufficient contrast for text)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/layout/SiteLayout.tsx",
+          "operation": "modify",
+          "description": "Refine responsive container widths, spacing, and typography scale tokens to ensure consistent hierarchy across breakpoints."
+        },
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Ensure hero typography, CTA sizing, and layout remain above-the-fold and usable on mobile/tablet/desktop, with no text overflow on small screens."
+        },
+        {
+          "path": "frontend/src/components/sections/ServicesSection.tsx",
+          "operation": "modify",
+          "description": "Verify service grid breakpoints, equal spacing, and hover/focus states for keyboard users."
+        },
+        {
+          "path": "frontend/src/components/sections/ProjectsSection.tsx",
+          "operation": "modify",
+          "description": "Ensure gallery layout and overlays are responsive and accessible (hover has keyboard-accessible equivalent, images have alt text)."
+        },
+        {
+          "path": "frontend/src/components/sections/TestimonialsSection.tsx",
+          "operation": "modify",
+          "description": "Ensure carousel is responsive, swipe works on touch devices, and controls are reachable with keyboard with visible focus."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Set a modern sans-serif stack and enforce readable line lengths, contrast-friendly foreground colors, and visible focus outlines consistent with the premium design."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Add the required generated construction images under frontend/public/assets/generated and wire them into Hero, About, and Projects sections.",
+      "acceptanceCriteria": [
+        "All generated images are present under frontend/public/assets/generated and are referenced directly by the frontend.",
+        "Hero uses the generated cinematic construction background image.",
+        "Featured Projects uses the generated project images, and About uses the generated about image."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/construction-hero-bg.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Add the generated hero background image asset at frontend/public/assets/generated/construction-hero-bg.dim_1920x1080.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/about-team.dim_1400x1000.png",
+          "operation": "create",
+          "description": "Add the generated about image asset at frontend/public/assets/generated/about-team.dim_1400x1000.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/project-01.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add the generated project image asset at frontend/public/assets/generated/project-01.dim_1200x900.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/project-02.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add the generated project image asset at frontend/public/assets/generated/project-02.dim_1200x900.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/project-03.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add the generated project image asset at frontend/public/assets/generated/project-03.dim_1200x900.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/project-04.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add the generated project image asset at frontend/public/assets/generated/project-04.dim_1200x900.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/project-05.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add the generated project image asset at frontend/public/assets/generated/project-05.dim_1200x900.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/project-06.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add the generated project image asset at frontend/public/assets/generated/project-06.dim_1200x900.png."
+        },
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Reference frontend/public/assets/generated/construction-hero-bg.dim_1920x1080.png as the hero background image with overlay treatment for text readability."
+        },
+        {
+          "path": "frontend/src/components/sections/AboutSection.tsx",
+          "operation": "modify",
+          "description": "Reference frontend/public/assets/generated/about-team.dim_1400x1000.png in the split About layout with the requested overlapping image effect."
+        },
+        {
+          "path": "frontend/src/components/sections/ProjectsSection.tsx",
+          "operation": "modify",
+          "description": "Reference the generated project images (frontend/public/assets/generated/project-01.dim_1200x900.png through frontend/public/assets/generated/project-06.dim_1200x900.png) as the gallery sources and lightbox content."
+        }
+      ]
+    }
+  ]
+}
